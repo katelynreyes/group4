@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Woof Sanctuary{% endblock %}</title>
+    <link href="{% static 'css/my_style.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <a href="{% url 'index' %}">Woof Sanctuary</a>
+    <a href="#">Adoptable Pets</a>
+    <a href="#">Volunteer Information</a>
+</div>
+<div class="container">
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+</body>
+
+</html>

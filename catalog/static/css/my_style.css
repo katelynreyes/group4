@@ -1,0 +1,18 @@
+ .topnav {
+        background-color: green; /* Set background color */
+        overflow: hidden; /* Ensure content doesn't overflow */
+    }
+
+    .topnav a {
+        float: left; /* Float links to the left */
+        display: block; /* Display links as block elements */
+        color: white; /* Set text color */
+        text-align: center; /* Center align text */
+        padding: 14px 16px; /* Add padding */
+        text-decoration: none; /* Remove default underline */
+    }
+
+    .topnav a:hover {
+        background-color: white; /* Change background color on hover */
+        color: black; /* Change text color on hover */
+    }
