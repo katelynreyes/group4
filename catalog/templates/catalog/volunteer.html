@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Woof Sanctuary{% endblock title %}</title>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <a href="{% url 'index' %}">Woof Sanctuary</a>
+    <a href="{% url 'volunteer' %}">Volunteer Information</a>
+    <!-- Other navigation links can go here -->
+</div>
+
+<div class="container">
+    {% block content %}
+    <!-- Content to be overridden in child templates -->
+    {% endblock content %}
+</div>
+
+</body>
+</html>
