@@ -3,5 +3,10 @@
 {% block content %}
   <h1>Woof Sanctuary</h1>
   <p>Welcome to Woof Sanctuary! We are a local non-profit that strives to rescue animals and provide them with loving homes.</p>
+  <ul>
+    <li><strong>Pets:</strong> {{ num_pets }}</li>
+    <li><strong>Animals:</strong> {{ num_instances }}</li>
+    <li><strong>Animals available:</strong> {{ num_instances_available }}</li>
+  </ul>
 
 {% endblock %}
