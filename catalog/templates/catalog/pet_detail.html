@@ -1,0 +1,32 @@
+{% extends "catalog/base.html" %}
+
+{% block content %}
+    <h1>Name: {{ pet.name }}</h1>
+    <p>Date of Birth: {{ pet.date_of_birth }}</p>
+    <!-- author detail link not yet defined -->
+
+    <div style="margin-left:20px;margin-top:20px">
+
+        <!-- Added By ec -->
+        {% for pet in author.pet_set.all %}
+            <p><strong>Pets </strong><a href="{{ pet.get_absolute_url }}">{{ pet.title }}</a></p>
+            {% for animal in pet.petinstance_set.all %}
+                <p class="{% if animal.status == 'a' %}text-success{% else %}text-warning{% endif %}"></p>
+                {% if animal.status == 'a' %}
+                    <p><strong>Available</strong></p>
+                {% elif animal.status != 'a' %}
+                    <p><strong>No Pets Available</strong></p>
+                {% endif %}
+            {% endfor %}
+                <!-- <a href="{ { pet.get_absolute_url }}">{ { pet.title }}</a> -->
+
+            <!--<p><strong>Description:</strong> {{ pet.description }}</p> -->
+        {% endfor %}
+
+    <!-- Added By ec , Tutorial 2: Section 8, Q#47 a) -->
+    <!-- <form>
+        <a href="{% url 'pet_list' %}"><input type="button" value="Back"/></a>
+    </form> -->
+
+    </div>
+{% endblock %}
