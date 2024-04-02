@@ -16,3 +16,11 @@
         background-color: white; /* Change background color on hover */
         color: black; /* Change text color on hover */
     }
+
+.pet-image { /*# formats the images to be the right size.*/
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+
+}
+    
