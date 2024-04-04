@@ -10,6 +10,7 @@ class Pet(models.Model):
     history = models.TextField(max_length=500, help_text='Enter a brief description of the pet')
     breed = models.CharField(max_length=100, null=True, blank=True)
     size = models.CharField(max_length=100, null=True, blank=True)
+    pet_image = models.ImageField(upload_to='images/', null=True, blank=True)
 
     def get_absolute_url(self):
         """returns the url to access the pet """
