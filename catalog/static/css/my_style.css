@@ -23,4 +23,31 @@
     max-height: 200px;
 
 }
-    
+
+.column {/*creates two blue columns with a border*/
+  column-count: 2;
+  column-gap: 20px;
+  column-rule-style: solid;
+  background-color: lightblue;
+  border: 3px solid black
+}
+
+.text1 {/*text format for larger font*/
+    font-size: 40px;
+    font-family: Arial;
+}
+
+.headerText {
+    font-size: 80px;
+    font-family: Arial;
+}
+
+.home-image {
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure the image is treated as a block element */
+    margin-top: 20px
+}
+
+
