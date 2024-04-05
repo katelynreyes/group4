@@ -24,16 +24,8 @@
 
 }
 
-.column {/*creates two blue columns with a border*/
-  column-count: 2;
-  column-gap: 20px;
-  column-rule-style: solid;
-  background-color: lightblue;
-  border: 3px solid black
-}
-
-.text1 {/*text format for larger font*/
-    font-size: 40px;
+ .text1 {/*text format for larger font*/
+    font-size: 50px;
     font-family: Arial;
 }
 
@@ -43,11 +35,39 @@
 }
 
 .home-image {
-    max-width: 500px;
-    max-height: 500px;
-    margin: 0 auto; /* Center the image horizontally */
-    display: block; /* Ensure the image is treated as a block element */
-    margin-top: 20px
+    max-width: 600px;
+    max-height: 600px;
+    display: block;
+    float: right;
+    padding: 75px
+}
+.home-image2 {
+    max-width: 600px;
+    max-height: 800px;
+    display: block;
+    float: left;
+    padding: 75px;
 }
 
+.box {
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 50px;
+  margin: 25px 25px 25px 150px;
+  float: left;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.box2 {
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 50px;
+  margin: 25px 0 50px 175px;
+  float: left;
+  background-color: lightblue;
+  text-align: center;
+}
 
