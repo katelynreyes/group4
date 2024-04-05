@@ -2,6 +2,7 @@
 
 
 {% block content %}
+    <div class="text2">
   <h1>Adoptable Pets</h1>
   {% if pet_list %}
   <ul>
@@ -17,5 +18,6 @@
   {% else %}
     <p>There are no pets available on the site directory.</p>
   {% endif %}
+    </div>
 {% endblock %}
 
