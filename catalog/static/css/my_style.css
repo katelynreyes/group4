@@ -1,6 +1,8 @@
  .topnav {
         background-color: green; /* Set background color */
         overflow: hidden; /* Ensure content doesn't overflow */
+        font-size: 16px;
+        font-family: Arial;
     }
 
     .topnav a {
@@ -30,7 +32,7 @@
 }
 
 .headerText {
-    font-size: 80px;
+    font-size: 40px;
     font-family: Arial;
 }
 
@@ -75,3 +77,22 @@
     font-size: 20px;
     font-family: Arial;
 }
+
+.logo {
+    max-width: 0px;
+    max-height: 0px;
+}
+
+ .paws {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 80%;
+ }
+
+ div.fixed {
+     position: absolute;
+     bottom: 690px;
+     right: 10px;
+     width: 100px;
+ }

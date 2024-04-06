@@ -7,7 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Woof Sanctuary{% endblock %}</title>
     <link href="{% static 'css/my_style.css' %}" rel="stylesheet">
-    <img src="{% static 'dog_logo.jpg' %}" alt="logo">
+
+<div class="logo">
+    <img src="{% static 'dog_logo.jpg' %}" alt="logo" width="100" height="120">
+</div>
+
+<div class="paws">
+    <img src="{% static 'paw_prints.jpg' %}" alt="paws" width="980" height="120">
+</div>
+
+<div class="fixed">
+    <img src="{% static 'dog_house.jpg' %}" alt="house" width="80" height="85">
+</div>
+
 </head>
 <body>
 <div class="topnav" id="myTopnav">
