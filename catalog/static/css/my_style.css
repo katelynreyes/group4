@@ -90,9 +90,16 @@
      width: 80%;
  }
 
- div.fixed {
+
+ footer {
      position: absolute;
-     bottom: 690px;
-     right: 10px;
-     width: 100px;
- }
+     font-family: Arial, sans-serif;
+     top: 2450px;
+     right: 0;
+     width: 1350px;
+     height: 140px;
+     background-color: #006400;
+     color: #ffffff;
+     text-align: center;
+     padding: 10px;
+  }
