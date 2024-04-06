@@ -73,10 +73,16 @@
   text-align: center;
 }
 
-.text2 {
-    font-size: 20px;
+.pet_list {
+    font-size: 16px;
     font-family: Arial;
+    margin: 10px 0;
 }
+
+.pet_detail {
+     font-size: 16px;
+     font-family: Arial;
+ }
 
 .logo {
     max-width: 0px;
