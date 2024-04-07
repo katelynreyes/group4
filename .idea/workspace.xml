@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="84864cfb-1b07-49c8-8701-a15377edf148" name="Changes" comment="" />
+=======
+    <list default="true" id="84864cfb-1b07-49c8-8701-a15377edf148" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/catalog/templates/catalog/pet_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/templates/catalog/pet_list.html" afterDir="false" />
+    </list>
+>>>>>>> 425bd5e7fdbc89d2820370c4f8d146073aed61d5
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,6 +92,8 @@
       <workItem from="1712284693792" duration="473000" />
       <workItem from="1712440094698" duration="70000" />
       <workItem from="1712440171465" duration="603000" />
+      <workItem from="1712441004985" duration="943000" />
+      <workItem from="1712442538387" duration="1109000" />
     </task>
     <servers />
   </component>
