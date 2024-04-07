@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="84864cfb-1b07-49c8-8701-a15377edf148" name="Changes" comment="" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="84864cfb-1b07-49c8-8701-a15377edf148" name="Changes" comment="" />
+=======
+    <list default="true" id="84864cfb-1b07-49c8-8701-a15377edf148" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/catalog/templates/catalog/pet_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/templates/catalog/pet_list.html" afterDir="false" />
+    </list>
+>>>>>>> 425bd5e7fdbc89d2820370c4f8d146073aed61d5
+>>>>>>> c6e4fed1b230dbaef6c0ac250c8126dbf317000e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
