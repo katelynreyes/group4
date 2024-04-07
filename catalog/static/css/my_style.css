@@ -80,16 +80,20 @@
 }
 
 .pet_detail {
-     font-size: 16px;
-     font-family: Arial;
+    font-size: 16px;
+    font-family: Arial;
+    color: #333333;
+    padding: 10px;
+    margin: 5px 0;
+    background: #e8f5e9;
  }
 
-.logo {
+.logo { /*# formats the logo.jpg image in the top left corner of header.*/
     max-width: 0px;
     max-height: 0px;
 }
 
- .paws {
+ .paws { /*# formats the paw.jpg image in the header.*/
      display: block;
      margin-left: auto;
      margin-right: auto;
@@ -97,7 +101,7 @@
  }
 
 
- footer {
+ footer { /*# formats content within the center of the footer.*/
      position: absolute;
      font-family: Arial, sans-serif;
      top: 2450px;
@@ -109,3 +113,9 @@
      text-align: center;
      padding: 10px;
   }
+
+ .animals { /*# formats the animal.jpg images in the bottom right corner of footer.*/
+  position: absolute;
+  bottom: 5px;
+  right: 16px;
+ }
