@@ -64,6 +64,13 @@
     text-align: center;
     padding: 10px;
   }
+
+  .animals { /*# formats the animal.jpg images in the bottom right corner of footer.*/
+  text-align: right;
+  bottom: 25px;
+  right: 25px;
+ }
+
 </style>
 </head>
 <body>
@@ -73,7 +80,7 @@
     </div>
     <nav>
       <ul>
-        <li><a href="{% url 'index' %}">Woof Sanctuary</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
       <li><a href="{% url 'pet_list' %}">Adoptable Pets</a></li>
       <li><a href="{% url 'volunteer' %}">Volunteer Page</a></li>
 <li>{% for pet in pets %}
@@ -122,9 +129,14 @@
 
   <footer>
     <p>© 2024 Woof Sanctuary</p>
-      <div class="house">
-          <img src="{% static 'animals.jpg' %}" alt="animal" width="250" height="99">
+    <div class="footer">
+        <img src="{% static 'dog_house.jpg' %}" alt="footer" width="80" height="85">
     </div>
-  </footer>
+
+    <div class="animals">
+        <img src="{% static 'animals.jpg' %}" alt="animal" width="250" height="125">
+    </div>
+</footer>
+
 </body>
 </html>
