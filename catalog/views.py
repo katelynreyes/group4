@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
-
 from .models import Pet
+#from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Existing import statements...
@@ -26,3 +26,4 @@ class PetDetailView(generic.DetailView):
 
 class PetListView(generic.ListView):
     model = Pet
+

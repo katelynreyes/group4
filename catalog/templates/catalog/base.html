@@ -7,11 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Woof Sanctuary{% endblock %}</title>
     <link href="{% static 'css/my_style.css' %}" rel="stylesheet">
-    <img src="{% static 'dog_logo.jpg' %}" alt="logo">
+
+    <div class="logo">
+        <img src="{% static 'dog_logo.jpg' %}" alt="logo" width="120" height="120">
+    </div>
+
+    <div class="paws">
+        <img src="{% static 'paw_prints.jpg' %}" alt="paws" width="1180" height="120">
+    </div>
+
 </head>
+
+
 <body>
 <div class="topnav" id="myTopnav">
-    <a href="{% url 'index' %}">Woof Sanctuary</a>
+    <a href="{% url 'index' %}">Home</a>
     <a href="{% url 'pet_list' %}">Adoptable Pets</a>
     <a href="{% url 'volunteer' %}">Volunteer Information</a>
 </div>
@@ -20,7 +30,18 @@
 
     {% endblock %}
 </div>
-
 </body>
+
+<footer>
+    <p>© 2024 Woof Sanctuary</p>
+    <div class="footer">
+        <img src="{% static 'dog_house.jpg' %}" alt="footer" width="80" height="85"> 
+    </div>
+    
+    <div class="animals">
+        <img src="{% static 'animals.jpg' %}" alt="animal" width="250" height="125">
+    </div>
+</footer>
+
 
 </html>

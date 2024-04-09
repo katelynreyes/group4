@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="84864cfb-1b07-49c8-8701-a15377edf148" name="Changes" comment="" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="84864cfb-1b07-49c8-8701-a15377edf148" name="Changes" comment="" />
+=======
     <list default="true" id="84864cfb-1b07-49c8-8701-a15377edf148" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/static/pexels-neosiam-+-672004.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/static/css/my_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/static/css/my_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/templates/catalog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/templates/catalog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/pexels-mia-x-11683916.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/templates/catalog/pet_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/templates/catalog/pet_list.html" afterDir="false" />
     </list>
+>>>>>>> 425bd5e7fdbc89d2820370c4f8d146073aed61d5
+>>>>>>> c6e4fed1b230dbaef6c0ac250c8126dbf317000e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,37 +45,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\katel\Documents\Web Dev\group4\catalog\static" />
-      <recent name="C:\Users\katel\Documents\Web Dev\group4\media\images" />
       <recent name="C:\Users\alese\OneDrive\Documents\Group 4\group4\catalog\templates\catalog" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
       </set>
     </attachedChunks>
   </component>
@@ -95,7 +92,12 @@
       <workItem from="1712020446959" duration="394000" />
       <workItem from="1712021324245" duration="6569000" />
       <workItem from="1712194864368" duration="8946000" />
-      <workItem from="1712286454404" duration="6031000" />
+      <workItem from="1712279241672" duration="15000" />
+      <workItem from="1712284693792" duration="473000" />
+      <workItem from="1712440094698" duration="70000" />
+      <workItem from="1712440171465" duration="603000" />
+      <workItem from="1712441004985" duration="943000" />
+      <workItem from="1712442538387" duration="1290000" />
     </task>
     <servers />
   </component>

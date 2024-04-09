@@ -1,26 +1,13 @@
 {% extends "catalog/base.html" %}
-    
+
 {% block content %}
-    <h1>Name: {{ pet.name }}</h1>
-    <p>Date of Birth: {{ pet.date_of_birth }}</p>
-    <p>History: {{ pet.history }}</p>
-    <p>Breed: {{ pet.breed }}</p>
-    <p>Size: {{ pet.size }}</p>
     
-    
-  <p>Adoptable Pets</p>
-  {% if pet_list %}
-  <ul>
-    {% for pet in pet_list %} 
-      <li>
-        <a href="{{ pet.get_absolute_url }}">{{ pet.name }}</a>({{pet.breed}})
-         {% if pet.pet_image %}
-          <img src="{{ pet.pet_image.url }}" alt="{{ pet.name }} Image" class = "pet-image">
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-    <p>There are no pets available on the site directory.</p>
-  {% endif %}
+    <div class="pet_detail">
+        <h1>Pet Name: {{ pet.name }}</h1>
+        <p>Date of Birth: {{ pet.date_of_birth }}</p>
+        <p>History: {{ pet.history }}</p>
+        <p>Breed: {{ pet.breed }}</p>
+        <p>Size: {{ pet.size }}</p>
+    </div> 
+
 {% endblock %}

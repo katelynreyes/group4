@@ -2,7 +2,7 @@
 
 
 {% block content %}
-    <div class="text2">
+    <div class="pet_list">
   <h1>Adoptable Pets</h1>
   {% if pet_list %}
   <ul>
@@ -14,8 +14,13 @@
     {% endfor %}
   </ul>
   {% else %}
-    <p>There are no pets available on the site directory.</p>
+    <p>Additional Information.</p>
   {% endif %}
     </div>
+    <style>
+.pet-image {
+  margin: 40px; 
+}
+</style>
 {% endblock %}
 

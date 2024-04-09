@@ -1,6 +1,8 @@
  .topnav {
         background-color: green; /* Set background color */
         overflow: hidden; /* Ensure content doesn't overflow */
+        font-size: 16px;
+        font-family: Arial;
     }
 
     .topnav a {
@@ -30,7 +32,7 @@
 }
 
 .headerText {
-    font-size: 80px;
+    font-size: 40px;
     font-family: Arial;
 }
 
@@ -71,7 +73,49 @@
   text-align: center;
 }
 
-.text2 {
-    font-size: 20px;
+.pet_list {
+    font-size: 16px;
     font-family: Arial;
+    margin: 10px 0;
 }
+
+.pet_detail {
+    font-size: 16px;
+    font-family: Arial;
+    color: #333333;
+    padding: 10px;
+    margin: 5px 0;
+    background: #e8f5e9;
+ }
+
+.logo { /*# formats the logo.jpg image in the top left corner of header.*/
+    max-width: 0px;
+    max-height: 0px;
+}
+
+ .paws { /*# formats the paw.jpg image in the header.*/
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 80%;
+ }
+
+
+ footer { /*# formats content within the center of the footer.*/
+     position: absolute;
+     font-family: Arial, sans-serif;
+     top: 2450px;
+     right: 0;
+     width: 1350px;
+     height: 140px;
+     background-color: #006400;
+     color: #ffffff;
+     text-align: center;
+     padding: 10px;
+  }
+
+ .animals { /*# formats the animal.jpg images in the bottom right corner of footer.*/
+  position: absolute;
+  bottom: 5px;
+  right: 16px;
+ }
