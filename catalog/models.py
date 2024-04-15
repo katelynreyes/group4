@@ -29,3 +29,8 @@ class PetInstance(models.Model):
     def __str__(self):
         """string for representing the Model object"""
         return f'{self.id} ({self.pet.name})'
+class Appointment(models.Model):
+    client_name = models.CharField(max_length=255)
+    appointment_date = models.DateTimeField()
+    appointment_type = models.CharField(max_length=255)
+    notes = models.TextField(blank=True, null=True)
