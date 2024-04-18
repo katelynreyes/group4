@@ -1,6 +1,5 @@
 from django.contrib import admin
-<<<<<<< HEAD
-from catalog.models import Pet, Appointment  # Assuming PetInstance is not needed, or is imported if it is
+from catalog.models import Pet, PetInstance, Appointment
 from django.utils import timezone
 from datetime import timedelta
 from datetime import date
@@ -21,7 +20,7 @@ class AppointmentAdmin(admin.ModelAdmin):
 
 @admin.register(Pet)
 class PetAdmin(admin.ModelAdmin):
-    list_display = ('name', 'breed', 'date_of_birth', 'available_for_adoption')
+    list_display = ('name', 'breed', 'get_age', 'available_for_adoption')
     list_filter = ('available_for_adoption', 'breed')
     search_fields = ('name', 'breed')
 
@@ -31,19 +30,11 @@ class PetAdmin(admin.ModelAdmin):
         else:
             return 'Unknown'
 
-    get_age.short_description = 'Age'  # Provides header for the column
+    get_age.short_description = 'Age'  # Provides a header for the column
 
 
 # Register the admin class with the associated model
 admin.site.register(Appointment, AppointmentAdmin)
 
-# If PetInstance needs to be registered, and you have a PetInstanceAdmin defined, use a similar approach:
-# admin.site.register(PetInstance, PetInstanceAdmin)
-=======
-from catalog.models import Pet, PetInstance
-
-# Register your models here.
-admin.site.register(Pet)
+# Assuming you want to keep the PetInstance registration
 admin.site.register(PetInstance)
-
->>>>>>> 33e8028c489bc62bb065715056b7905dbaaacb83
