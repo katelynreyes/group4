@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Model
 from django.urls import reverse  # Used to generate URLs by reversing the URL patterns
 import uuid  # Required for unique pet instances
 
@@ -29,3 +30,13 @@ class PetInstance(models.Model):
     def __str__(self):
         """string for representing the Model object"""
         return f'{self.id} ({self.pet.name})'
+
+
+class AdoptionApplication(models.Model):
+    full_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone_number = models.CharField(max_length=20)
+    address = models.CharField(max_length=255)
+    why_you_want_to_adopt = models.CharField(max_length=500)
+    name_of_pet= models.CharField(max_length=50)
+
