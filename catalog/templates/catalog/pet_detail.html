@@ -7,8 +7,14 @@
         <p>Date of Birth: {{ pet.date_of_birth }}</p>
         <p>Breed: {{ pet.breed }}</p>
         <p>Size: {{ pet.size }}</p>
+
         <p>Details: {{ pet.details }}</p>
         <p>History: {{ pet.history }}</p>
     </div> 
+
+
+        <a href="{% url 'adoption_application' %}">Adoption Application</a>
+    </div>
+    
 
 {% endblock %}
