@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse  # Used to generate URLs by reversing the URL patterns
 import uuid  # Required for unique pet instances
 
+
 class Pet(models.Model):
     """Model representing a pet."""
     name = models.CharField(max_length=100)
@@ -20,6 +21,7 @@ class Pet(models.Model):
         """String for representing the Model object (in Admin site etc.)."""
         return self.name
 
+
 class PetInstance(models.Model):
     """Model representing a specific pet that can have an appointment created to visit."""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Unique ID for this pet")
@@ -28,6 +30,7 @@ class PetInstance(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.id} ({self.pet.name})'
+
 
 class Appointment(models.Model):
     """Model representing an appointment."""
@@ -39,6 +42,7 @@ class Appointment(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.appointment_date} - {self.client_name}'
+
 
 class AdoptionApplication(models.Model):
     """Model representing an adoption application."""
