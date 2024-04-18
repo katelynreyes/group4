@@ -1,4 +1,5 @@
 from django.contrib import admin
+<<<<<<< HEAD
 from catalog.models import Pet, Appointment  # Assuming PetInstance is not needed, or is imported if it is
 from django.utils import timezone
 from datetime import timedelta
@@ -38,3 +39,11 @@ admin.site.register(Appointment, AppointmentAdmin)
 
 # If PetInstance needs to be registered, and you have a PetInstanceAdmin defined, use a similar approach:
 # admin.site.register(PetInstance, PetInstanceAdmin)
+=======
+from catalog.models import Pet, PetInstance
+
+# Register your models here.
+admin.site.register(Pet)
+admin.site.register(PetInstance)
+
+>>>>>>> 33e8028c489bc62bb065715056b7905dbaaacb83
