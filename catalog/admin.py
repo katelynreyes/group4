@@ -1,8 +1,8 @@
 from django.contrib import admin
-from catalog.models import Pet, PetInstance
-from .models import Appointment
+from catalog.models import Pet, Appointment  # Assuming PetInstance is not needed, or is imported if it is
 from django.utils import timezone
 from datetime import timedelta
+from datetime import date
 
 
 class AppointmentAdmin(admin.ModelAdmin):
@@ -18,8 +18,23 @@ class AppointmentAdmin(admin.ModelAdmin):
         return qs.filter(appointment_date__range=(now, upcoming))
 
 
+@admin.register(Pet)
+class PetAdmin(admin.ModelAdmin):
+    list_display = ('name', 'breed', 'date_of_birth', 'available_for_adoption')
+    list_filter = ('available_for_adoption', 'breed')
+    search_fields = ('name', 'breed')
+
+    def get_age(self, obj):
+        if obj.date_of_birth:
+            return date.today().year - obj.date_of_birth.year
+        else:
+            return 'Unknown'
+
+    get_age.short_description = 'Age'  # Provides header for the column
+
+
 # Register the admin class with the associated model
 admin.site.register(Appointment, AppointmentAdmin)
 
-admin.site.register(Pet)
-admin.site.register(PetInstance)
+# If PetInstance needs to be registered, and you have a PetInstanceAdmin defined, use a similar approach:
+# admin.site.register(PetInstance, PetInstanceAdmin)

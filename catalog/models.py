@@ -11,6 +11,7 @@ class Pet(models.Model):
     breed = models.CharField(max_length=100, null=True, blank=True)
     size = models.CharField(max_length=100, null=True, blank=True)
     pet_image = models.ImageField(upload_to='images/', null=True, blank=True)
+    available_for_adoption = models.BooleanField(default=True)
 
     def get_absolute_url(self):
         """returns the url to access the pet """
@@ -29,6 +30,8 @@ class PetInstance(models.Model):
     def __str__(self):
         """string for representing the Model object"""
         return f'{self.id} ({self.pet.name})'
+
+
 class Appointment(models.Model):
     client_name = models.CharField(max_length=255)
     appointment_date = models.DateTimeField()
