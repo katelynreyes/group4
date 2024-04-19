@@ -1,17 +1,21 @@
 from django.shortcuts import render
 from django.views import generic
+from .models import Pet
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Pet, PetInstance
 from django.shortcuts import render, redirect
 from .forms import AdoptionForm
-
 from catalog.forms import AdoptionForm
-
 from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 
 def index(request):
     """View function for home page of site."""
-    context = {'test': 'Testing'}
+    context = {
+        'test': 'Testing'
+    }
+
     return render(request, 'catalog/index.html', context=context)
 
 
@@ -23,11 +27,11 @@ def volunteer(request):
     return render(request, 'catalog/volunteer.html')
 
 
-class PetDetailView(generic.DetailView):
+class PetDetailView(LoginRequiredMixin, generic.DetailView):
     model = Pet
 
 
-class PetListView(generic.ListView):
+class PetListView(LoginRequiredMixin, generic.ListView):
     model = Pet
 
 

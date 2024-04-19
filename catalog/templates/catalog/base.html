@@ -25,15 +25,43 @@
     <a href="{% url 'pet_list' %}">Adoptable Pets</a>
     <a href="{% url 'volunteer' %}">Volunteer Information</a>
 </div>
+
+<!-- Segment 5 --> 
+<!--Display Login/Logout right-justified in navbar -->
+    <ul class="nav navbar-nav ml-auto">
+        {% if user.is_authenticated %}
+           <li>
+              <form action="{% url 'logout' %}" method="post">
+                 {% csrf_token %}
+                 <button type="submit">Log out</button>
+              </form>
+           </li>
+            
+        {% else %}
+            <li><a class="nav-link" href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+            </li>
+            <li><a class="nav-link" href="{% url 'register' %}"><span class="glyphicon glyphicon-log-in"></span>Sign Up</a>
+             </li>
+            
+        {% endif %}
+    </ul>
+
 <div class="container">
+    {% if user.is_authenticated %}
+        Welcome, {{ user.first_name }} {{ user.last_name }}
+    {% endif %}
+</div>
+<div class="container">
+    <br/>
     {% block content %}
 
     {% endblock %}
 </div>
+
 </body>
 
 <footer>
-    <p>© 2024 Woof Sanctuary</p>
+    <p>Copyright © 2024 Woof Sanctuary</p>
     <div class="footer">
         <img src="{% static 'dog_house.jpg' %}" alt="footer" width="80" height="85"> 
     </div>

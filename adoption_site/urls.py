@@ -7,8 +7,7 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('catalog.urls')),
-
-
-
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('', include('register.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
