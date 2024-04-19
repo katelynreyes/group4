@@ -1,20 +1,16 @@
 from django.contrib import admin
-from catalog.models import Pet, PetInstance, Appointment
 from django.utils import timezone
-from datetime import timedelta
-from datetime import date
+from datetime import timedelta, date
+from .models import Pet, PetInstance, Appointment, AdoptionApplication
 
 
 class AppointmentAdmin(admin.ModelAdmin):
     list_display = ('appointment_date', 'client_name', 'appointment_type')
 
-    # Function to filter upcoming appointments within, say, the next 30 days
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        # Get current date and date for 30 days in the future
         now = timezone.now()
         upcoming = now + timedelta(days=30)
-        # Filter appointments between now and the upcoming date
         return qs.filter(appointment_date__range=(now, upcoming))
 
 
@@ -30,11 +26,15 @@ class PetAdmin(admin.ModelAdmin):
         else:
             return 'Unknown'
 
-    get_age.short_description = 'Age'  # Provides a header for the column
+    get_age.short_description = 'Age'
 
 
-# Register the admin class with the associated model
+@admin.register(AdoptionApplication)
+class AdoptionApplicationAdmin(admin.ModelAdmin):
+    list_display = ('full_name', 'email', 'phone_number', 'address', 'name_of_pet')
+    list_filter = ('name_of_pet',)
+    search_fields = ('full_name', 'email', 'address', 'name_of_pet')
+
+
 admin.site.register(Appointment, AppointmentAdmin)
-
-# Assuming you want to keep the PetInstance registration
 admin.site.register(PetInstance)
