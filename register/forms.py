@@ -22,6 +22,6 @@ class RegisterForm(UserCreationForm):
             user.last_name = self.cleaned_data["last_name"]
             if commit:
                 user.save()
-            return user
+            return user  
 
 
