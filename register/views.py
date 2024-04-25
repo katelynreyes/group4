@@ -1,24 +1,44 @@
 from django.shortcuts import render, redirect
-from .forms import RegisterForm
-from django.contrib.auth.models import User,Group
+from .forms import RegisterForm, LoginForm
+from django.contrib.auth.models import User, Group
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.http import HttpResponse
 
 # Create your views here.
+
+def login(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            cleaned_data = form.cleaned_data
+            customer = authenticate(request,
+                                    username=cleaned_data['username'],
+                                    password=cleaned_data['password'])
+            if customer is not None:
+                if customer.is_active:
+                    login(request, customer)
+                    return HttpResponse('Authentication Valid')
+
+                else:
+                    return HttpResponse('Authentication Invalid')
+            else:
+                return HttpResponse('Invalid Login')
+
+        else:
+            form = LoginForm()
+        return render(request, 'registration/logged_out.html', {'form': form})
+
+
 def register(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
-            uname = form.cleaned_data['username']
-            form.save()
-            #get the new user info and set the group for this user to LibraryMember
-            user = User.objects.get(username=uname)
-            lib_group = Group.objects.get(name='LibraryMember')
-            user.groups.add(lib_group)
-            user.save()
-            return redirect('login')
-
-        return redirect("index")
-    else:
-        form = RegisterForm()
-
+            customer = form.save() # Added
+            login(request, customer)
+            messages.success(request, "Registration Successful.")
+            return redirect('/')
+        messages.error(request, "Registration Unsuccessful.")
+    form = RegisterForm()
     return render(request, "register.html", {"form": form})
 

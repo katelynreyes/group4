@@ -27,11 +27,11 @@ def volunteer(request):
     return render(request, 'catalog/volunteer.html')
 
 
-class PetDetailView(LoginRequiredMixin, generic.DetailView):
+class PetDetailView(generic.DetailView):
     model = Pet
 
 
-class PetListView(LoginRequiredMixin, generic.ListView):
+class PetListView(generic.ListView):
     model = Pet
 
 
