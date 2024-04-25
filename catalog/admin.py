@@ -31,7 +31,7 @@ class PetAdmin(admin.ModelAdmin):
 
 @admin.register(AdoptionApplication)
 class AdoptionApplicationAdmin(admin.ModelAdmin):
-    list_display = ('full_name', 'email', 'phone_number', 'address', 'name_of_pet')
+    list_display = ('user','full_name', 'email', 'phone_number', 'address', 'name_of_pet')
     list_filter = ('name_of_pet',)
     search_fields = ('full_name', 'email', 'address', 'name_of_pet')
 
