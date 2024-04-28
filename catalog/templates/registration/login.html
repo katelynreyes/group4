@@ -32,6 +32,9 @@
             <a href="{% url 'register' %}"> Sign Up Now</a>
         </p>
   
+    {# Assumes you setup the password_reset view in your URLconf #}
+    <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
+  
   </form>
     
 {% endblock %}

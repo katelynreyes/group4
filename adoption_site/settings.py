@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'catalog.apps.CatalogConfig',
     'register.apps.RegisterConfig',
+    'django.contrib.admin',
     'crispy_forms',
     'crispy_bootstrap5',
 ]
@@ -139,3 +139,11 @@ LOGIN_REDIRECT_URL = '/'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
+# SMTP Configuration for sending password reset email
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'woofsanctuary4@gmail.com'
+EMAIL_HOST_PASSWORD = 'Mynewpet$'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+#SERVER_EMAIL = ‘root@gmail.com’
