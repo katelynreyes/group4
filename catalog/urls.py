@@ -4,6 +4,10 @@ from . import views
 from .views import adoption_application
 
 urlpatterns = [
+<<<<<<< Updated upstream
+=======
+    # path('admin/', admin.site.urls),
+>>>>>>> Stashed changes
     path('', views.index, name='index'),  # the main page
     path('pet_list/', views.PetListView.as_view(), name='pet_list'),  # Pet list page
     path('pet_detail/<int:pk>', views.PetDetailView.as_view(), name='pet_detail'),
