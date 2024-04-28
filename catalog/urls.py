@@ -11,5 +11,4 @@ urlpatterns = [
     path('adoption/', adoption_application, name='adoption_application'),#application page
     path('application_submitted/', views.application_submitted, name='application_submitted'), # successful submission
 
-
 ]

@@ -35,10 +35,11 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             customer = form.save() # Added
-            login(request, customer)
+            customer.save()
             messages.success(request, "Registration Successful.")
             return redirect('/')
         messages.error(request, "Registration Unsuccessful.")
     form = RegisterForm()
     return render(request, "register.html", {"form": form})
+
 
