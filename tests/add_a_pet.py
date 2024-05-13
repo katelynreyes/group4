@@ -27,7 +27,7 @@ class ll_ATS(unittest.TestCase):
         elem.send_keys(Keys.RETURN)
 
         time.sleep(3)
-        # find 'Users' and click it. Then find "Add user" and click it
+        # find 'Pets' and click it. Then find "Add Pet" and click it
 
         driver.find_element(By.XPATH, "//a[contains(., 'Pets')]").click()
         driver.find_element(By.LINK_TEXT, ('ADD PET')).click()
@@ -37,7 +37,7 @@ class ll_ATS(unittest.TestCase):
         history = 'test'
         breed = 'test'
         size = 'test'
-        # find the username box and fill it in with the credentials
+        # find the fields in the add a pet form and fill it in with the credentials above
         elem = driver.find_element(By.ID, "id_name")
         elem.send_keys(name)
         # find the password box and fill it in with the credentials
@@ -54,14 +54,14 @@ class ll_ATS(unittest.TestCase):
         # time.sleep(5)
 
         try:
-            # verify that the 'Change user' header shows up on the page, meaning that the user was saved successfully.
+            # verify that the link to the name of the pet we added shows up on the success section, meaning that the pet was saved successfully.
             driver.find_element(By.PARTIAL_LINK_TEXT, ('Pet'))
             self.driver.close()
             assert True
 
         except NoSuchElementException:
             driver.close()
-            self.fail("Change user header was not found. Form did not save new user.")
+            self.fail("Link to new pet's name was not found on page. Pet not added successfully")
 
         time.sleep(5)
 
