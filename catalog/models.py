@@ -33,16 +33,16 @@ class PetInstance(models.Model):
         return f'{self.id} ({self.pet.name})'
 
 
-class Appointment(models.Model):
-    """Model representing an appointment."""
-    client_name = models.CharField(max_length=255)
-    appointment_date = models.DateTimeField()
-    appointment_type = models.CharField(max_length=255)
-    notes = models.TextField(blank=True, null=True)
-
-    def __str__(self):
-        """String for representing the Model object."""
-        return f'{self.appointment_date} - {self.client_name}'
+# class Appointment(models.Model):
+#     """Model representing an appointment."""
+#     client_name = models.CharField(max_length=255)
+#     appointment_date = models.DateTimeField()
+#     appointment_type = models.CharField(max_length=255)
+#     notes = models.TextField(blank=True, null=True)
+#
+#     def __str__(self):
+#         """String for representing the Model object."""
+#         return f'{self.appointment_date} - {self.client_name}'
 
 
 class AdoptionApplication(models.Model):

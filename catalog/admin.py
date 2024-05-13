@@ -1,17 +1,17 @@
 from django.contrib import admin
 from django.utils import timezone
 from datetime import timedelta, date
-from .models import Pet, PetInstance, Appointment, AdoptionApplication
+from .models import Pet, PetInstance, AdoptionApplication
 
 
-class AppointmentAdmin(admin.ModelAdmin):
-    list_display = ('appointment_date', 'client_name', 'appointment_type')
-
-    def get_queryset(self, request):
-        qs = super().get_queryset(request)
-        now = timezone.now()
-        upcoming = now + timedelta(days=30)
-        return qs.filter(appointment_date__range=(now, upcoming))
+# class AppointmentAdmin(admin.ModelAdmin):
+#     list_display = ('appointment_date', 'client_name', 'appointment_type')
+#
+#     def get_queryset(self, request):
+#         qs = super().get_queryset(request)
+#         now = timezone.now()
+#         upcoming = now + timedelta(days=30)
+#         return qs.filter(appointment_date__range=(now, upcoming))
 
 
 @admin.register(Pet)
