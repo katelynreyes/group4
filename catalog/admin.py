@@ -36,5 +36,5 @@ class AdoptionApplicationAdmin(admin.ModelAdmin):
     search_fields = ('full_name', 'email', 'address', 'name_of_pet')
 
 
-admin.site.register(Appointment, AppointmentAdmin)
+
 admin.site.register(PetInstance)
