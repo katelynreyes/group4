@@ -103,7 +103,7 @@
  footer { /*# formats content within the center of the footer.*/
      position: absolute;
      overflow: hidden;
-     box-shadow: 0 100vh 0 100vh #006400;
+     box-shadow: 0 100vh 0 100vh #006400; 
      font-family: Arial, sans-serif;
      top: 2450px;
      right: 0;
