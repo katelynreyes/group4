@@ -29,12 +29,24 @@
     font-size: 50px;
     font-family: Arial;
 }
-
+.text2 {
+    front-size: 20px;
+    font-family: Arial;
+}
 .headerText {
     font-size: 40px;
     font-family: Arial;
 }
 
+.volunteerText {
+    font-size: 30px;
+    font-family: Arial;
+}
+
+.list {
+    text-align: left;
+    font-family: Arial;
+}
 .home-image {
     max-width: 600px;
     max-height: 600px;
